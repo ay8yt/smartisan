@@ -1,0 +1,22 @@
+<script id="hot_word" type="text/html">
+        <div class="seach">
+        </div>
+        <input type="text" name="" id="serch">
+        <a href="<%=data.recommend.pc[0].url%>" class="blue">
+            <%=data.recommend.pc[0].name%>
+        </a>
+        <a href="<%=data.recommend.pc[1].url%>" class="green">
+                <%=data.recommend.pc[1].name%>
+            </a>
+        <div class="hot_word">
+                <ul>
+        <% for(var i=0;i<data.hot.length ;i++) { %>
+
+       
+            <li>
+              <%=data.hot[i] %>
+            </li>
+        <% }%>
+            </ul>
+        </div>
+</script>

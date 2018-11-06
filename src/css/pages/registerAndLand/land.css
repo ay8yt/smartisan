@@ -1,0 +1,440 @@
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+html, body, ol, ul, div, a {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.head {
+  min-height: 800px;
+  min-width: 630px;
+  background-image: url("https://static.smartisanos.cn/account.common/img/v2/bg_9b9dcb65ff.png");
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.form {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  width: 450px;
+  margin: auto;
+  background-image: url("https://static.smartisanos.cn/account.common/img/dialog-gray-bg_42c40b3eb6.png");
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #dadada;
+  box-shadow: 0 9px 30px -6px rgba(0, 0, 0, 0.2), 0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 18px 20px -10px rgba(0, 0, 0, 0.04), 0 10px 20px -10px rgba(0, 0, 0, 0.04);
+}
+
+.form .logo {
+  background: url("https://static.smartisanos.cn/account.common/img/v2/logo/smartisan_4ada7fecea.png") no-repeat center;
+  margin: 23px 0 50px;
+  padding: 75px 0 0;
+  height: 92px;
+}
+
+.form .logo > h4 {
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.form > .row {
+  padding: 0;
+  margin: 0;
+  padding: 50px 40px 0;
+}
+
+.form > .row input {
+  height: 46px;
+}
+
+.form > .row .input-group {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.4) inset, -1px 0 3px -2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.form > .row .input-group > .input-group-addon {
+  background: -webkit-linear-gradient(#f8f8f8, #fafafa);
+  position: absolute;
+  display: block;
+  top: 0;
+  border-right: 1px solid #ccc;
+  width: 46px;
+  height: 46px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: url("https://static.smartisanos.cn/account.common/img/dialog-input-icons_ff627ad6dc.png") no-repeat;
+}
+
+.form > .row .input-group > .input-group-addon:first-child {
+  background-position: -1px 0;
+}
+
+.form > .row .input-group > .input-group-addon-active {
+  border-color: #66afe9;
+}
+
+.form > .row .input-group > .form-control {
+  padding-left: 55px;
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.form > .row .input-group > .form-control:focus {
+  box-shadow: none;
+  border-color: none;
+}
+
+.form > .row .input-group > .form-control-active {
+  background-color: white;
+}
+
+.form > .row .input-group-active {
+  border: 1px solid #6b93f2;
+}
+
+.form .errorMessage {
+  background: #d16d62;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-size: 12px;
+  font-weight: 400;
+  height: 26px;
+  line-height: 26px;
+  margin: 10px 0 0;
+  padding: 0 10px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 10;
+}
+
+.form > .con-rem {
+  padding-top: 0px;
+}
+
+.form > .con-rem > .rem {
+  margin: 15px 5px 25px;
+}
+
+.form > .con-rem > .rem > .left {
+  color: #999;
+  float: left;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.form > .con-rem > .rem > .left > span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url("https://static.smartisanos.cn/account.common/img/v2/checkbox_f49f6e4acf.png") no-repeat;
+  background-position-y: -20px;
+}
+
+.form > .con-rem > .rem > .left > .span-active {
+  background-position-y: 0;
+}
+
+.form > .con-rem > .rem > .left > .span-error {
+  border-color: #d16d62;
+}
+
+.form > .con-rem > .rem > .right {
+  position: relative;
+  margin-right: -10px;
+  float: right;
+}
+
+.form > .con-rem > .rem > .right > a {
+  color: #5079d9;
+  font-size: 12px;
+}
+
+.form > .con-rem > .rem > .right > a:hover {
+  text-decoration: none;
+  color: #5079d9;
+}
+
+.form > .con-rem > .rem > .right::after {
+  content: "";
+  background: #999;
+  width: 1px;
+  height: 9px;
+  position: absolute;
+  left: 104px;
+  top: 6px;
+  bottom: -16px;
+}
+
+.form .con-btn {
+  padding-top: 20px;
+}
+
+.form .con-btn > .btn {
+  background-color: #6383c6;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  height: 48px;
+  outline: none;
+  pointer-events: none;
+}
+
+.form .bottom {
+  font-size: 12px;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #d9d9d9;
+  color: #999;
+}
+
+.form .bottom > ul {
+  display: block;
+  overflow: hidden;
+  float: left;
+}
+
+.form .bottom > ul > li {
+  float: left;
+}
+
+.form .bottom > ul > li:not(:first-child) {
+  cursor: pointer;
+  width: 20px;
+  height: 17px;
+  margin-left: 10px;
+  background-image: url("https://static.smartisanos.cn/account.common/img/v2/icons_c3a3154da5.png");
+}
+
+.form .bottom > ul > li:not(:first-child):hover {
+  background-image: url("https://static.smartisanos.cn/account.common/img/v2/icons-hover_7b3065c847.png");
+}
+
+.form .bottom .other {
+  float: right;
+}
+
+.form .bottom .other a {
+  color: #999;
+}
+
+.form .bottom .other a:hover {
+  color: #5079d9;
+  text-decoration: none;
+}
+
+.con-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 60px;
+  width: fit-content;
+}
+
+.con-bottom .con {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.con-bottom .con > h2 {
+  height: 15px;
+  font-size: 12px;
+  color: #999;
+  float: left;
+  margin-right: 10px;
+}
+
+.con-bottom .con > ul {
+  float: left;
+}
+
+.con-bottom .con > ul > li {
+  height: 15px;
+  line-height: 12px;
+  float: left;
+  border-left: 1px solid #d9d9d9;
+  padding: 0 10px;
+}
+
+.con-bottom .con > ul > li a {
+  color: #5079d9;
+  font-size: 12px;
+}
+
+.con-bottom .con > ul > li a:hover {
+  text-decoration: none;
+}
+
+.con-bottom .icp {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.con-bottom .icp a:hover {
+  text-decoration: none;
+  color: #5079d9;
+}
+
+.title {
+  background: linear-gradient(#fff, #f5f5f5);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #dcdcdc;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.title > h4 {
+  height: 61px;
+  line-height: 61px;
+  font-weight: 700;
+  color: #666;
+  font-size: 20px;
+}
+
+.form > .land-row {
+  padding-top: 10px;
+}
+
+.form > .land-row > .input-group > .form-control {
+  font-size: 16px;
+  height: 48px;
+}
+
+.form > .land-row > .input-group > .input-group-addon {
+  font-size: 16px;
+  height: 48px;
+}
+
+.form > .land-row > .input-group > #diqu {
+  position: absolute;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  display: block;
+  line-height: 48px;
+  color: #666;
+  font-size: 20px;
+  left: 57px;
+}
+
+.form > .land-row > .input-group .mmgs {
+  display: none;
+  z-index: 30;
+  width: auto;
+  padding: 0 0 0 15px;
+  line-height: 50px;
+  background: #fff;
+  color: #999;
+  border: 0;
+  box-shadow: none;
+  text-align: left;
+  left: 0;
+  border-radius: 12px;
+  font-size: 14px;
+  position: absolute;
+  top: 49px;
+  border: 1px solid #dadada;
+}
+
+.form > .land-row > .input-group .mmgs > p {
+  color: #999;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  padding-right: 15px;
+}
+
+.form > .land-row > .input-group .mmgs::before {
+  top: -19px;
+  left: 60px;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent #cfcfcf transparent;
+}
+
+.form > .land-row > .input-group .mmgs::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent #fff transparent;
+  top: -18px;
+  left: 60px;
+}
+
+.form > .land-row .yz {
+  margin-top: 20px;
+  width: 130px;
+  box-shadow: none;
+  display: block;
+  float: right;
+  font-size: 16px;
+  color: #666;
+  text-shadow: #fff 0 1px 0;
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
+  outline: none;
+  background: linear-gradient(#fafafa, #f5f5f5);
+  border: 1px solid #dadada;
+}
+
+.form > .land-row .yz:hover {
+  background: #ccc;
+}
+
+.form > .bottom > .land {
+  text-align: center;
+}
+
+.form > .bottom > .land > a {
+  color: #5079d9;
+}
+
+.form > .bottom > .land > a:hover {
+  text-emphasis: none;
+  color: #5079d9;
+}

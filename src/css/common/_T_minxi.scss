@@ -1,0 +1,26 @@
+
+@mixin trangie($dir, $width,$color){
+    content: "";
+    position: absolute;
+    width:0;
+    height:0;
+    border-style: solid;
+    border-width:  $width;
+    @if($dir == top){
+        border-color: transparent  transparent $color transparent;
+    }
+    @if($dir == bottom){
+        border-color: $color transparent transparent transparent;
+    }
+    @if($dir == left ){
+        border-color: transparent $color transparent transparent;
+    }
+    @if($dir == right){
+        border-color: transparent transparent transparent $color;
+    }
+  
+
+
+    
+}
+

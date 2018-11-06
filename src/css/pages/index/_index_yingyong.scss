@@ -1,0 +1,209 @@
+.yy{
+    @extend %home-box;
+    > .title{
+        @extend %home-box-title;
+        >.door{
+            position: absolute;
+            right: 14px;
+            top: 12px;
+            >a{
+                margin-right: 0;
+                font-weight: 700;
+                padding: 0 15px;
+                line-height: 34px;
+                background: #fafafa;
+                border: 1px solid #e1e1e1;
+                border-radius: 4px;
+                background-image: linear-gradient(180deg,#fff,#fafafa);
+                display: inline-block;
+                position: relative;
+                margin: 0 15px;
+                font-size: 14px;
+                color: #666;
+                cursor: pointer;
+                transition: all .15s ease-out;
+                text-decoration: none;
+            }
+        }
+    }
+    >ul{
+        > li::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            box-sizing: border-box;
+            border-left: 1px solid #f2f2f2;
+            border-left: 1px solid rgba(0,0,0,.1);
+            width: 100%;
+            height: 100%;
+           
+            pointer-events: none;
+            border-left: none;
+        }
+        >li{
+
+           
+
+            border-left: 1px solid #f2f2f2;
+            border-left: 1px solid rgba(0,0,0,.1);
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+            width: 25%;
+            height: 315px;
+            text-align: center;
+            padding: 50px 30px 30px;
+
+            > .content{
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                transition: opacity .2s ease-out .1s;
+                >.app-image{
+                    margin: 0 auto;
+                    width: 96px;
+                    height: 96px;
+                    background-repeat: no-repeat;
+                    background-size: auto 90px;
+                    background-position: 2px 0;
+                    background-image: url('https://static.smartisanos.cn/index/assets/images/app-icon-sprite.1220be4bfe4e02d3f616d62d1766ebb1.png')
+                }
+                >.info{
+                    z-index: 1;
+                    margin-top: 40px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    >h6{
+                        font-weight: bold;
+                        font-size: 15px;
+                    }
+                    >p{
+                        margin: 0;
+                        padding: 0;
+                        margin-top: 15px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        >span{
+                            display: block;
+                            overflow: hidden;
+                            margin-top: 6px;
+                            font-size: 12px;
+                            line-height: 1.2;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            color: #999;
+                        }
+                    }
+                }
+                > .logo{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0;
+                    width: 100%;
+                    height: 16px;
+                    text-align: center;
+                    >span{
+                        display: inline-block;
+                        position: relative;
+                        margin: 0 5px;
+                    }
+                }
+               
+
+            }
+            
+            >.ophide{
+               display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                background: #fff;
+               
+                transition: opacity .1s cubic-bezier(.4,0,1,1);
+                > .con-botton{
+                    padding: 82px 0 15px;
+                    >a{
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom: 20px;
+                        box-sizing: border-box;
+                        border: 1px solid transparent;
+                        border-radius: 6px;
+                        padding: 10px 20px;
+                        width: 210px;
+                        height: 50px;
+                        font-size: 14px;
+                        line-height: 25px;
+                        text-align: center;
+                        white-space: nowrap;
+                        color: #fff;
+                        background-color: #6f97e5;
+                        background-image: linear-gradient(#6f97e5,#527ed9);
+                        box-shadow: inset 0 1px 2px #7ea1e8;
+                        text-shadow: #4f70b3 0 -1px 0;
+                        cursor: pointer;
+                        >span:first-child{
+                            width: 20px;
+                            background-size: 20px auto;
+                        }
+                        >span::last-child{
+                            font-size: 12px;
+                            vertical-align: middle;
+                            color: #fff;
+                        }
+                    }
+                }
+                > .jyb{
+                    color: #5079d9;
+                    cursor: pointer;
+                    transition: all .15s ease-out;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin-top: 16px;
+                    font-size: 12px;
+                    line-height: 1.2;
+                }
+                > .con-jyb{
+                    color: #5079d9;
+                    cursor: pointer;
+                    transition: all .15s ease-out;
+                    text-decoration: none;  
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            >.link{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: #5079d9;
+                cursor: pointer;
+                transition: all .15s ease-out;
+                text-decoration: none;
+            }
+
+            &:hover{
+                >.content{
+                    display: none;
+                }
+                >.ophide{
+                    display: block;
+                }
+            }
+
+
+        }
+    }
+
+}

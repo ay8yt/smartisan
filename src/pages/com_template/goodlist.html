@@ -1,0 +1,23 @@
+<script id="goodlistTemp" type="text/html">
+
+   
+           
+              <ul>
+            <% for(var i=0; i< data.length; i++) { %>
+                <li>
+                  <a href="https://www.smartisan.com/item/<%=data[i].spu_id%>">
+                    <img src="<%=data[i].shop_info.ali_image %>"
+                      alt="">
+                    <div class="phname">
+                      <%= data[i].product_info.product_name%>
+                    </div>
+                    <div class="phpice">
+                         ¥  <%=data[i].spu.price %>.00 起
+                    </div>
+                  </a>
+                </li>
+            <%}%>
+              </ul>
+           
+         
+</script>

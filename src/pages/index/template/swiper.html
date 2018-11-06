@@ -1,0 +1,22 @@
+<script id="swiper_cen" type="text/html">
+
+
+    <div class="row border">
+            <div class="swiper-container">
+                  <div class="swiper-wrapper ">
+    <% for(var i =0;i<data.length;i++) {%>
+
+        <div class="swiper-slide stop-swiping">
+            <a href="<%=data[i].link%>">
+                <img src="<%=data[i].image[0]%>" class="img-rounded" alt="">
+            </a>
+        </div>
+    <%}%>   
+            </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+
+
+</script>

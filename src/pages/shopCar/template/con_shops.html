@@ -1,0 +1,99 @@
+<script id="shops" type="text/html">
+    <div class="shop-name">
+            <div style="float:left;width:217px">商品信息</div>
+            <div style="float:right;width:137px">操作</div>
+            <div style="float:right;width:137px">小计</div>
+            <div style="float:right;width:137px">数量</div>
+            <div style="float:right;width:137px">单价</div>
+        </div>
+        <div class="con-shops">
+            {{each data}}
+            {{if typeof($value) == "object"}}
+            <div localid = {{$index}}>
+                        {{if $value.tag != undefined}}
+                         <div class="tag">
+                            <span class="s1">
+                               {{$value.tag}}
+                            </span>
+                            <span class="s2">
+                               {{$value.title}}
+                            </span>
+                        </div>
+                        {{/if}}
+                        <div class="check">
+                            <div class="chk">
+
+                            </div>
+                           <a href="" id="con-img">
+                               <img src="{{$value.imgurl}}" alt="">
+                           </a>
+                           <div class="con-name">
+                                <a href="">
+                               {{$value.name}}
+                               </a>
+                               <div class="rl-name">
+                                {{$value.rl}}
+                               </div>
+                           </div>
+                           <div class="del">
+
+                            </div>
+                            <div class="sum">
+                                ¥   <span>
+                                   {{$value.num * $value.price}}
+                                </span> .00
+                            </div>
+                            <div class="num">
+                                <div class="jian">
+ 
+                                </div>
+                                <span>
+                                    {{$value.num}}  
+                                </span>
+                                <div class="jia">
+ 
+                                </div>
+                            </div>
+                           <div class="price">
+                            ¥ {{$value.price}}  .00
+                           </div>
+                        </div>
+            </div>
+            {{/if}}
+           {{/each}}
+        
+        </div>
+        <div class="qx">
+            <div class="chk" id="all-ck">
+
+            </div>
+            <div class="con-del-all">
+                <span class="all">全选</span> 
+                <span class="del-all">
+                    |&nbsp; 删除选中商品
+                </span>
+            </div>
+            <div class="con-right">
+                <div class="shangpin">
+                    <div class="xzjj">
+                        已选择 <span>0</span> 件商品
+                    </div>
+                    <div class="gjjj">
+                        共计 <span>1</span>  件商品
+                    </div>  
+                </div>
+                <div class="pay">
+                    <div class="sumpay">
+                        应付总额：￥<span>0</span>.00
+                    </div>
+                    <div class="tips">
+                        应付总额不含运费
+                    </div>
+                </div>
+                <a id="js" href="" onclick="alert('还没实现');return false;">
+                    现在结算
+                </a>
+            </div>
+        </div>
+
+</script>

@@ -1,0 +1,30 @@
+<script id="lt" type="text/html">
+
+
+
+    <div class="title">
+        <div class="title-name">
+            论坛精选
+        </div>
+        <div class="door">
+            <a href="">前往论坛 ></a>
+        </div>
+    </div>
+    <div class="con-lt" id="parviteScroll">
+        <%for(var i =0;i<data.length;i++) {%>
+        <div class="text-image">
+            <div class="cont">
+            <img src="<%=data[i].image%>?x-oss-process=image/resize,w_246/format,webp" alt="">
+            <h5><%=data[i].data%></h5>
+            <p>
+                <%=data[i].subtitle%>
+            </p>
+            <span>
+                阅读全文 >
+            </span>
+            <a href="<%=data[i].link%>"target="_blank" ></a>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</script>

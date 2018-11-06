@@ -1,0 +1,75 @@
+<script id="home-hot-shop" type="text/html">
+   
+          <div class="con-ul">
+            <ul>
+            <% for(var i=0;i<data.length;i++) {%>
+               
+
+
+              <li id="<%=data[i].temp[0].spu_id%>" href = "http://localhost:8080/pages/detail/detail.html?spu=<%=data[i].temp[0].sku_id%>" class="li_hover_hot_shop">
+                
+                  <div class="box-item">
+                  <div class="com-img">
+                    <img src="<%=data[i].temp[0].spu.sku_info[0].ali_image%>?x-oss-process=image/resize,w_216/format,webp" alt="">
+                    <h4><%=data[i].temp[0].spu.name%></h4>
+                    <h6 calss="h6_block"><%=data[i].temp[0].spu.shop_info.spu_mobile_sub_title%></h6>
+                    <% if(data[i].temp.length > 1){%>
+                    <h6 class="h6_hover"><%=data[i].temp[1].title%></h6>
+                    <%} else{%>
+                      <h6 class="h6_hover" style="color: #999;"><%=data[i].temp[0].spu.shop_info.spu_mobile_sub_title%></h6>
+                    <%}%>
+                  </div>
+                  <div class="ul-color">
+                    <ul>
+                        <%
+                        var info = data[i].temp[0].spu.sku_info;
+                        var temparr = [];
+                        for(var j=0;j<info.length;j++){
+                            if(j==0 || temparr.indexOf(info[j].spec_json[0].image) == -1 ){
+                              temparr.push(info[j].spec_json[0].image)
+                        %>
+                      <li id="<%=j%>" dataI="<%=i%>" class="ck_li
+                      <% if(j==0) {%>
+                        li-active 
+                      <%}%>
+                      ">
+                        
+                        <div class="col">
+                          <img src="<%=info[j].spec_json[0].image%>?x-oss-process=image/resize,w_20" alt="">
+                        </div>
+                      </li>
+
+                      <%}}%>
+
+                    </ul>
+                  </div>
+    
+                  <div class="con_but">
+                    <button>
+                      查看详情
+                    </button>
+                  </div>
+    
+    
+                  <div class="money">
+                    <span>
+                      ¥
+                      <span>
+                          <%=data[i].temp[0].spu.price%>.00
+                      </span>
+                    </span>
+                  </div>
+    
+                  <% if(data[i].temp.length > 1){%>
+                  <span>
+                     <%=data[i].temp[1].tag%>
+                  </span>
+                  <%}%>
+                </div>
+              
+              </li>
+           
+             <%}%>
+            </ul>
+          </div>
+</script>

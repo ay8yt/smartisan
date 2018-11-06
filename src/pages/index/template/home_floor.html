@@ -1,0 +1,111 @@
+<script id="home_floor" type="text/html">
+
+
+<%for(var i=0;i<data.length;i++){%>
+
+
+            <div class="home_floors">
+            <div class="title">
+            <div class="title-name">
+            <%=data[i].title%>
+            </div>
+            <%if(data[i].tabs.length>1){%>
+            <div class="floors-page">
+            <a class=""><%=data[i].tabs[0].tab_name%></a>
+            <a class=""><%=data[i].tabs[1].tab_name%></a>
+            </div>
+            <%}%>
+            </div>
+            <div class="con-ul">
+
+            <% for(var j=0;j<data[i].tabs.length;j++) { %>
+
+            <ul
+            <% if(j==1) {%>
+              style="display:none"
+              <%}%>
+            >
+                    <% for(var item=0;item < data[i].tabs[j].tab_items.length ;item++){%>
+                            <%if(item == 0){%>
+                                  <li href ="<%=data[i].tabs[j].tab_items[item].link%>" class="li_hover">
+                                  <img src="<%=data[i].tabs[j].tab_items[item].image%>" alt="">
+                                  </li>
+                            <%} else{%> 
+
+
+                              <li id="<%=data[i].tabs[j].tab_items[item].spu_id%>" href = "http://localhost:8080/pages/detail/detail.html?spu=<%=data[i].tabs[j].tab_items[item].sku_id%>" class="li_hover">
+
+                                      <div class="box-item">
+                                              <div class="com-img">
+                                                    <img src="<%=data[i].tabs[j].tab_items[item].spu.sku_info[0].ali_image%>?x-oss-process=image/resize,w_216/format,webp" alt="">
+                                                    <h4><%=data[i].tabs[j].tab_items[item].spu.name%></h4>
+                                                    <h6 calss="h6_block"><%=data[i].tabs[j].tab_items[item].spu.shop_info.spu_mobile_sub_title%></h6>
+
+
+
+                                                    <% if( data[i].tabs[j].tab_items[item].tag != "null"){%>  
+
+                                                    <h6 class="h6_hover"><%= data[i].tabs[j].tab_items[item].tag.title%></h6>
+                                                    <%} else{%>
+                                                      <h6 class="h6_hover" style="color: #999;"><%=data[i].tabs[j].tab_items[item].spu.shop_info.spu_mobile_sub_title%></h6>
+                                                    <%}%>
+                                              </div>
+                                              <div class="ul-color">
+                                                      <ul>
+                                                              <%
+                                                              var info =data[i].tabs[j].tab_items[item].spu.sku_info;
+                                                              var temparr = [];
+                                                              for(var x=0;x<info.length;x++){
+                                                              if(x==0 || temparr.indexOf(info[x].spec_json[0].image) == -1 ){
+                                                                      
+                                                                temparr.push(info[x].spec_json[0].image)
+                                                              %>
+                                                              <li id="<%=x%>" item="<%=item%>" tabs="<%=j%>" data="<%=i%>"  class="ck_li
+                                                                      <% if(x==0) {%>
+                                                                      li-active 
+                                                                      <%}%>
+                                                              ">
+
+                                                              <div class="col">
+                                                              <img src="<%=info[x].spec_json[0].image%>?x-oss-process=image/resize,w_20" alt="">
+                                                              </div>
+                                                              </li>
+
+                                                              <%}}%>
+
+                                                      </ul>
+                                              </div>
+
+                                              <div class="con_but">
+                                                      <button>
+                                                      查看详情
+                                                      </button>
+                                              </div>
+
+
+                                              <div class="money">
+                                                      <span>
+                                                      ¥
+                                                      <span>
+                                                      <%=data[i].tabs[j].tab_items[item].spu.price%>.00
+                                                      </span>
+                                                      </span>
+                                              </div>
+
+                                              <% if( data[i].tabs[j].tab_items[item].tag != "null"){%>
+                                                    <span>
+                                                    <%=data[i].tabs[j].tab_items[item].tag.tag%>
+                                                    </span>
+                                              <%}%>
+                                            </div>
+
+                                    </li>
+                            <%}%>
+
+                      <%}%>
+            </ul>
+            <%}%>
+          </div>
+            </div>
+<%}%>
+</script>

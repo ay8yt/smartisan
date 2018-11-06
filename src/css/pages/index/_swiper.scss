@@ -1,0 +1,41 @@
+.swiper-wrapper {
+    border: 1px solid rgba(0,0,0,.14);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 3px 8px -6px rgba(0,0,0,.1);
+}
+
+.swiper-slide > a >img {
+    width: 100%;
+    position: relative;
+    top: -28px;
+
+}
+
+.border {
+    border-radius: 20px;
+}
+.swiper-container{
+    margin-top : 0px;
+    width: 1220px;
+    height: 499px;
+    border: 1px solid rgba(0,0,0,.14);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 3px 8px -6px rgba(0,0,0,.1);
+
+}
+.swiper-pagination-bullet{
+    width:11px;
+    height:11px;
+}
+.swiper-pagination-bullet-active {
+   background: white;
+   width:11px;
+    height:11px;
+}
+.center .con-swiper{
+    margin-top:20px;
+    margin-bottom:30px;
+    overflow: hidden;
+} 

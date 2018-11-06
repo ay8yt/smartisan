@@ -1,0 +1,18 @@
+<script id="banner" type="text/html">
+    <% for(var i = 0;i<data.length ;i++) { %>
+      <% if(data[i].is_show=="1" || data[i].name=="企业团购"  ){ %>
+
+        <li>
+          <% if(data[i].name == "手机")  {%>
+           
+            <div class="goodlist">
+            <div class="container" id="container"> </div></div>
+          <% }%>
+             <a href="<%=data[i].info.url %>"> <%=data[i].name%> </a>
+         </li>
+      
+      
+
+         <% }%>
+    <%} %>
+</script>

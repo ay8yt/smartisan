@@ -1,0 +1,62 @@
+<script id ="shopCar" type="text/html">
+    <ul>
+        {{each data}}
+        {{if(typeof($value) == "object")}}
+            <li shopid = {{$index}}>
+              <div class="del">
+                
+              </div>
+                <div class="car-left">
+                  <img src="{{$value.imgurl}}" alt="">
+                </div>
+                <div class="car-right">
+                  <div class="shop-name">
+                   {{$value.name}}
+                  </div>
+                 <div class="color-rl">
+                     {{$value.color}} &nbsp;&nbsp;|&nbsp;&nbsp;
+                    {{$value.rl}}
+                 </div>
+                 <div class="price-num">
+                   <span style="font-size:12px;color:#d44d44;">
+                     ￥
+                   </span>
+                   <span style="font-size:17px;color:#d44d44;">
+                   {{$value.price}}
+                   </span>
+                   
+                   <span class="num" >
+                    x {{$value.num}}
+                   </span>
+                 </div>
+                </div>
+              </li>
+              {{/if}}
+            {{/each}}
+          </ul>
+          <div class="sum">
+            <div class="sum-left">
+              <div style="font-size:12px;color:#cacaca">
+                共计
+                  <span>
+                    {{data.sum}}
+                  </span>
+                件商品
+              </div>
+              <div class="gongji">
+                <span style="font-size:14px;color:#6f6f6f;">合计：</span>
+                <span style="color:#de4037">
+                  ￥
+                </span>
+                <span style="font-size:18px;color:#de4037;font-weight: 700;">
+                  {{data.money}}
+                </span>
+              </div>
+            </div>
+            <div class="sum-right">
+              <a href="#">
+                去购物车
+              </a>
+            </div>
+          </div>
+</script>

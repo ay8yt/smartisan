@@ -1,0 +1,265 @@
+<script id="detail" type="text/html">
+    <div class="container phone-message"  >
+            <div class="row">
+                <div class="col-lg-6 _left head_img">
+                    <img src="{{data.temp[0].sku_info[0].ali_image}}?x-oss-process=image/resize,w_527/format,webp" alt="">
+                </div>
+                <div class="col-lg-6 _right">
+                  
+                    <div class="row title">
+                        <h1 class="title-name" sku_id="">
+                            
+                            {{data.temp[0].name}}
+                        </h1>
+                        <div class="title-message">
+                            {{data.temp[0].shop_info.highlights}}
+                        </div>
+                    </div>
+                  
+                    {{if data.temp.length>2}}
+                    <div class="row con-warp">
+                        <div class="col-lg-2">
+                                <span class="hd">
+                                        促销活动
+                                </span>
+                        </div>
+                        {{if data.temp.length >2}}
+                        <div class="col-lg-10">
+                            <span class="hdtag">
+                                    {{data.temp[2].tag}}
+                            </span>
+                            <span class="hdtat-me">
+                                    {{data.temp[2].title}}
+                            </span>
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                    <div class="row con-color">
+                        <div class="col-lg-2">
+                                <span class="hd">
+                                        颜色选择
+                                </span>
+                        </div>
+                        <div class="col-lg-10">
+                            
+                            <div class="ul-color">
+                            <ul>
+                            {{set spec_v2 = data.temp[0].shop_info.spec_v2[0].spec_values}}
+
+                            {{ each spec_v2}}
+                            <li id="0" datai="0" color_id={{$value.id}} class="ck_li
+                            {{if $index == 0}}
+                             li-active
+                            {{/if}}
+                             ">
+                                <div class="col" style="margin-bottom: 20px;">
+                                <img src="{{$value.image}}?x-oss-process=image/resize,w_52" alt="">
+                               
+                                </div>
+                                {{$value.show_name}}
+
+                            </li>
+                            {{/each}}
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{if data.temp[0].shop_info.spec_v2.length > 1}}
+                    <div class="row rongliang" >
+                        <div class="col-lg-2" style="line-height:48px9 ">
+                            <span>容量选择</span>
+                        </div>
+                        <div class="col-lg-10 rl">
+                            <ul>
+                                {{set spec_v2_rl = data.temp[0].shop_info.spec_v2[1].spec_values}}
+                                {{ each spec_v2_rl}}
+                                <li class="
+                                {{if $index==0}}
+                                    rl-li
+                                {{/if}}
+                                " rl_id="{{$value.id}}">
+                                    <div>
+                                           {{$value.show_name}}
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                    {{/if}}
+                    <div class="row con-bx">
+                        <div class="col-lg-2" style="line-height:75px">
+                            保险服务
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="bx">
+                                <ul>
+                                   
+                                    <li>
+                                        <div class="item">
+                                            <div class="item-left">
+                                                <div class="l1">
+                                                        坚果 Pro 2S 意外碎屏保修服务
+                                                </div>
+                                                <div class="l2">
+                                                        “屏幕意外摔碎，可以免费更换 ? ”
+                                                </div>
+                                            </div>
+                                            <div class="item-right">
+                                                    <div class="r1">
+                                                          <span style="font-size:21px">99</span>  元/年 
+                                                    </div>
+                                                    <div class="r2">
+                                                            折算后仅需 <span style="font-size:12px">0.27</span>  元/天 
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                   
+                                    <li>
+                                        <div class="item">
+                                            <div class="item-left">
+                                                <div class="l1">
+                                                        坚果 Pro 2S 意外碎屏保修服务
+                                                </div>
+                                                <div class="l2">
+                                                        “屏幕意外摔碎，可以免费更换 ? ”
+                                                </div>
+                                            </div>
+                                            <div class="item-right">
+                                                    <div class="r1">
+                                                            <span style="font-size:21px">99</span>  元/年 
+                                                    </div>
+                                                    <div class="r2">
+                                                            折算后仅需 <span style="font-size:12px">0.27</span>  元/天 
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bxfu">
+                        <div class="col-lg-offset-2">
+                           <div class="row">
+                               <div class="col-lg-2">
+                                   <span>
+                                       *保修服务
+                                   </span>
+                               </div>
+                               <div class="col-lg-10">
+                                   <p>
+在您购买“意外碎屏保修服务”后的有效期内，由于意外坠落、意外挤压或碰撞等非蓄意破坏的原因导致手机屏幕碎裂，可免费更换一次原装屏幕组件。您可选择在手机初次联网激活时或收货次日起 3 日内访问<a href="http://bx.smartisan.com">bx.smartisan.com</a>  网站购买，或在本机 设置 > 关于本机 > 保修服务中购买服务。服务细则参见<a href="https://www.smartisan.com/support/#/broken-screen">《意外碎屏保修服务条款》</a>
+                                   </p>
+                                   <p>
+                                        如您购买本服务，在手机正常“三包” 1 年保修期结束后，将额外多获得 1 年保修服务。延长保修服务期为 1 年，自手机正常“三包” 1 年服务期的截止日之次日零时开始，至第二年对应日之 24 时结束。<a href="https://www.smartisan.com/support/#/insurance">《延长保修服务条款》</a>
+                                    </p>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        
+        <div class="conimg">
+            <div class="con-img">
+                <div class="js">
+                    <span>技术规格</span>
+                </div>
+                {{set temp = data.temp[0].shop_info.tpl_content.base.images.spec_params}}
+                {{if temp == undefined}}
+                {{set  temp = data.temp[0].shop_info.tpl_content.base.images.spec_params_mobile}}
+                {{/if}}
+                {{if temp == undefined}}
+                 {{ set temp = data.temp[0].shop_info.tpl_content.base.images.ali}}
+                {{/if}}
+                {{set height = temp.height }}
+                <%for(var i=0;i<height/1440;i++){%>
+                <img src="{{temp.url[0]}}?x-oss-process=image/resize,w_1920/indexcrop,y_1440,i_<%=i%>/format,webp" alt="">
+                <%}%>
+                
+               
+            </div>
+        </div>
+        <div class="conxg">
+            <div class="con-xg">
+                <div class="js">
+                        <span>相关推荐</span>
+                </div>
+                <div class="home-hot-shop">
+                </div>
+               
+
+
+
+            </div>
+        </div>
+       
+       
+        
+        
+        <div class="fixed-bottom">
+            <div class="container con">
+                <div class="row">
+                    <div class="col-lg-3 _left">
+                        <div class="row">
+                            <div class="col-lg-3">
+                              <h1 >您已选择</h1>  
+                            </div>
+                            <div class="col-lg-9">
+                                <span class="pname">
+                                        {{data.temp[0].name}}
+                                </span>
+                                &nbsp;  &nbsp;  &nbsp;
+                                <span class="pprice">
+                                        ¥ {{data.temp[0].price}}.00
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="  col-lg-offset-3 ">
+                                <span class="pcolor">
+                                       <my1>{{data.temp[0].shop_info.spec_v2[0].spec_values[0].show_name}}</my1>
+                                       
+                                        {{if data.temp[0].shop_info.spec_v2.length > 1}}
+                                       <my2> &nbsp;&nbsp;|&nbsp;&nbsp;  {{data.temp[0].shop_info.spec_v2[1].spec_values[0].show_name}}</my2>
+                                       {{/if}}
+                                </span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-3 _center">
+                        <div class="row">
+                            附加商品
+                        </div>
+                        <div class="row">
+                            与手机一同下单，将免费送货
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-2   _right">
+                        <div class="big-price">
+                            <span class="logo-price">
+                                ¥
+                            </span>
+                            <span class="price-b">
+                                {{data.temp[0].price}}.00
+                            </span>
+                        </div>
+                        <button type="button" class="btn btn-primary"   id= "car" >现在购买</button>
+                        <button type="button" class="btn btn-default" color_id="" rl_id="" id="buy">加入购物车</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shopTips">
+            <div class="tips">
+                已添加至购物车
+            </div>
+                
+        </div>
+</script>

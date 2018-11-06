@@ -1,0 +1,274 @@
+$head_H : 45px;
+.ban_con{
+    .goodlist{
+        display: none;
+        background-color:rgb(245,245,245);
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,.05);
+        
+        height:0;
+        width:100%;
+      
+      
+        position: absolute;
+        top:13px;
+        left:0;
+        > .container{
+           width: 1200px;
+           > ul {
+               margin: 0;
+               padding: 0;
+               overflow:hidden;
+               margin: 0 auto;
+               position: relative;
+               > li {
+                   width:234px;
+                   height:296px;
+                   padding:0 40px;
+                float:left;
+                > a{
+                    padding-top:40px;
+                    display: block;
+                    text-align: center;
+                    > .phname{
+                        padding-top:10px;
+                        font-size: 12px;
+                        color:#616161;
+                    }
+                    > .phpice {
+                        margin-top: -5px;
+                        font-size: 14px;
+                        color:#d44d44;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    > img{
+                        width:160px;
+                        height:160px;
+                    }
+                }
+               }
+               > li:not(:last-child){
+                   > a {
+                       position: relative;
+                    &::after{
+                        content:"";
+                        width:1px;
+                        background: rgb(235, 235, 235);
+                        position: absolute;
+                        top:51px;
+                        bottom:8px;
+                        right:-40px;
+                    }
+                }
+                   
+               }
+
+           }
+        }
+    }
+}
+
+.banner{
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.05);
+    border-bottom: 1px solid #e1e1e1;
+    background:#fff;
+    padding-top:23px;
+    padding-bottom:23px;
+//    min-height: 1220px;
+    position: absolute;
+    width:100%;
+    top:$head_H;
+    z-index: 5;
+    > .row{
+        margin: 0 auto;
+    }
+    .ban{
+        width:1220px;
+        height:28px;
+        padding: 0;
+        > ul{
+            float: left;
+            height:28px;
+            line-height: 28px;
+            > li{
+                float:left;
+                > a {
+                    display: block;
+                    padding: 0 15px;
+                    text-decoration: none;
+                    color:rgba(0,0,0,.7);
+                    &:hover{
+                        color:#5079d9;
+                    }
+                }
+            }
+        }
+        .ban-right{
+           position: relative;
+            float: right;
+            .seach{
+                z-index: 2;
+                width:20px;
+                height:20px;
+                background-size: contain;
+                background-image:  url("https://static.smartisanos.cn/index/assets/images/magnify@2x.1e45d9b9d95da09794d7708b1349cb6e.png") ;
+                position: absolute;
+                top:7px;
+                left:12px;
+            }
+            > input{
+                position: relative;
+                border: 1px solid rgba(0,0,0,.2);
+                box-shadow: inset 0 1px 6px 0 rgba(0,0,0,.05);
+                outline: none;
+                width:396px;
+                height:32px;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius:20px;
+                padding-left:35px;
+                &:focus{
+                    ~ .blue, ~ .green{
+                        display: none;
+                    }
+                    ~ .hot_word{
+                        display: block;
+                    }
+                }
+            }
+            > a{
+                position: absolute;
+                color: #3965cc;
+                border: 1px solid #93b2f7;
+                background: #e5efff;
+                display: inline-block;
+                margin-right: 7px;
+                text-decoration: none;
+                border-radius: 10px;
+                height: 20px;
+                padding: 0 10px;
+                box-sizing: border-box;
+                text-overflow: ellipsis;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 20px;
+               
+            }
+            .blue{
+                top:6px;
+                left:135px;
+                color: #3965cc;
+                border: 1px solid #93b2f7;
+                background: #e5efff;
+            }
+            .green{
+                top:6px;
+                right:0;
+                color: #8aad37;
+                border: 1px solid rgba(138,173,55,.6);
+                background: #f7fae1;
+            }
+            .hot_word{
+                display: none;
+                position: absolute;
+                left:0;
+                top:57px;
+                > ul{
+                    width:396px;
+                    border: 1px solid #cfcfcf;
+                    border-radius: 8px;
+                    background: #fff;
+                    box-shadow: 0 30px 75px 0 rgba(0,0,0,.3);
+                    overflow: hidden;
+                    > li{
+                        padding:10px 20px;
+                      
+                        font-size: 14px;
+                        color:#666;
+                        cursor: pointer;
+                        &:hover{
+                            color:#5079d9;
+                            font-weight: bold;
+                        }
+                    }
+                    > li:first-child{
+                        padding-top:20px;
+                    }
+                    &::before{
+                        top:-19px;
+                        left:34px;
+                        @include trangie(top,10px,#cfcfcf);
+                    }
+                    &::after{
+                        @include trangie(top,10px,#fff);
+                        top:-18px;
+                        left:34px;
+                        
+                    }
+                }
+            }
+        }
+
+        >.right{
+            @extend %right;
+            position: relative;
+            margin-top:-10px;
+            right: -46px;
+            .user_hie{
+                &::before{
+                    
+                    @include trangie(top,10px,#cfcfcf);
+                    top:-21px;
+                    left:105px;
+                }
+                &::after{
+                    @include trangie(top,10px,#fff);
+                   
+                    top:-20px;
+                    left:105px;
+                }
+            }
+            .con_use{
+                position: absolute;
+            }
+            .con_shop{
+                position: absolute;
+                right:-15px;
+            }
+            .shop,.shop-has{
+                
+                &::before{
+                    @include trangie(top,10px,#cfcfcf);
+                    top:1px;
+                    right:45px;
+                }
+                &::after{
+                    @include trangie(top,10px,#fff);
+                    top:2px;
+                    right:45px;
+                }
+            }
+           
+            .user{
+                background: url("https://static.smartisanos.cn/index/assets/images/profilephoto.8bafeea9522156520e36033ca3319217.png") no-repeat 1px 2px;
+                background-size : 100%;
+                &:hover{
+                    background-position: 1px 2px;
+                }
+            }
+            .shopcar {
+                background: url("https://static.smartisanos.cn/index/assets/images/carticon.d57833ca24ea1e7eabfe5448faccf904.png") no-repeat 1px 1px;
+                background-size : 100%;
+                &:hover{
+                    background-position: 1px 1px;
+                  
+                }
+            } 
+        }
+
+
+    }  
+
+   
+}
